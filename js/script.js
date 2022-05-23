@@ -1,37 +1,33 @@
-// let controles = document.querySelectorAll(".controle")
-// controles.forEach(element => {
-//   element.querySelectorAll(".controle-ajuste").forEach(element2 => {
-//     element2.addEventListener('click', () => {
-//       if(element2.innerHTML == "+") {
-//         valor = parseInt(element.querySelector(".controle-contador").value)
-//         valor += 1
-//         if(valor >= 0 && valor <= 10){
-//           element.querySelector(".controle-contador").value = valor
-//         }
-//         else{
-//           valor = parseInt(element.querySelector(".controle-contador").value)
-//           valor -= 1
-//           if(valor >= 0 && valor <= 10){
-//             element.querySelector(".controle-contador").value = valor
-//           }
-//         }
-//       }
-//     })
-//   })
-// });
-
 const btnBracoMenos = document.getElementById("btnBracoMenos")
 const btnBracoMais = document.getElementById("btnBracoMais")
 
 btnBracoMenos.addEventListener("click", diminui)
 btnBracoMais.addEventListener("click", aumenta)
+btnBlindMenos.addEventListener("click", removeBlind)
+btnBlindMais.addEventListener("click", addBlind)
+
 
 function diminui(){
-  const txtBraco = document.getElementById("txtBraco")
-  txtBraco.value = txtBraco.value - 1
+  const txtBraco = document.getElementById("txtBraco");
+  if(txtBraco.value <= 10 && txtBraco.value > 0){
+    txtBraco.value = txtBraco.value - 1;
+  }
 }
 
 function aumenta(){
-  const txtBraco = document.getElementById("txtBraco")
-  txtBraco.value = parseInt(txtBraco.value) + 1
+  const txtBraco = document.getElementById("txtBraco");
+  if (txtBraco.value >= 0 && txtBraco.value < 10){
+    txtBraco.value = parseInt(txtBraco.value) + 1;
+  }
+}
+
+function addBlind(){
+  const txtBlind = document.getElementById("txtBlind");
+  if(txtBlind.value >= 0 && txtBlind.value < 10){
+    txtBlind.value = parseInt(txtBlind.value) + 1;
+  }
+}
+
+function removeBlind(){
+  
 }
