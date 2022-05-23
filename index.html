@@ -8,12 +8,12 @@
     <title>Robotron 2000</title>
 
     <link rel="stylesheet" href="css/style.css">
-    <script src="script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
 </head>
 <body>
+    
     <main>
         <section class="robotron">
             <img class="robo" src="img/robotron.png" alt="Robotron">
@@ -53,9 +53,9 @@
                     <div class="peca">
                         <label for="" class="peca-titulo">Braços</label>
                         <div class="controle">
-                            <buttom class="controle-ajuste">-</buttom>
-                            <input type="text" class="controle-contador" value="00">
-                            <buttom class="controle-ajuste">+</buttom>
+                            <buttom class="controle-ajuste" id="btnBracoMenos">-</buttom>
+                            <input type="text" class="controle-contador" id="txtBraco" value="00">
+                            <buttom class="controle-ajuste" id="btnBracoMais">+</buttom>
                         </div>
                     </div>
                     <hr class="linha">
@@ -100,4 +100,5 @@
         </section>
     </main>
 </body>
+<script src="js/script.js"></script>
 </html>
