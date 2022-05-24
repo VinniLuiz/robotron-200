@@ -81,4 +81,3 @@ function removeFogo() {
   if(txtFogo.value <= 10 && txtFogo.value > 0){
     txtFogo.value = parseInt(txtFogo.value) - 1;
   }
-}
