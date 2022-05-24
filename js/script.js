@@ -5,6 +5,8 @@ btnBracoMenos.addEventListener("click", diminui)
 btnBracoMais.addEventListener("click", aumenta)
 btnBlindMenos.addEventListener("click", removeBlind)
 btnBlindMais.addEventListener("click", addBlind)
+btnNucleoMais.addEventListener("click", addNuc)
+btnNucleoMenos.addEventListener("click", removeNuc)
 
 
 function diminui(){
@@ -29,5 +31,22 @@ function addBlind(){
 }
 
 function removeBlind(){
-  
+  const txtBlind = document.getElementById("txtBlind");
+  if(txtBlind.value <=10 && txtBlind.value > 0){
+    txtBlind.value = parseInt(txtBlind.value) - 1;
+  }
+}
+
+function addNuc() {
+  const txtNucleo = document.getElementById("txtNucleo");
+  if(txtNucleo.value >= 0 && txtNucleo.value < 10){
+    txtNucleo.value = parseInt(txtNucleo.value) + 1;
+  }
+}
+
+function removeNuc() {
+  const txtNucleo = document.getElementById("txtNucleo");
+  if(txtNucleo.value <= 10 && txtNucleo.value > 0){
+    txtNucleo.value = parseInt(txtNucleo.value) - 1;
+  }
 }
